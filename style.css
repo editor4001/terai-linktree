@@ -1,0 +1,279 @@
+/* ----------------- IMPORTS ----------------- */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/* ----------------- RESET ----------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #1a001f, #0d0010, #000000);
+  color: #ccc;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* ----------------- NAVBAR ----------------- */
+#nav {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 15px 30px;
+  background-color: rgba(30, 0, 40, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 15px;
+  margin-bottom: 30px;
+  position: sticky;
+  top: 10px;
+  z-index: 100;
+}
+
+#nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+#nav ul li a {
+  color: #d38fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px #a000ff;
+}
+
+#nav ul li a:hover {
+  background: rgba(211, 143, 255, 0.2);
+  box-shadow:
+    0 0 15px #a000ff,
+    0 0 25px #d38fff;
+  transform: scale(1.05);
+}
+
+/* ----------------- HEADER ----------------- */
+header {
+  text-align: center;
+  background-color: rgba(20, 0, 30, 0.4);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 20px;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+  box-shadow:
+    0 0 10px #a000ff,
+    0 0 25px #d38fff;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #d38fff;
+  text-shadow:
+    0 0 5px #d38fff,
+    0 0 10px #a000ff,
+    0 0 20px #d38fff,
+    0 0 40px #a000ff;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #ccc;
+  font-size: 1.2rem;
+  background: linear-gradient(to right, #a000ff, #d38fff, #a000ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ----------------- DESCRIPTION ----------------- */
+#description {
+  position: relative;
+  background: rgba(30, 0, 40, 0.3);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow:
+    0 0 10px #a000ff,
+    0 0 20px #d38fff;
+}
+
+#description h2 {
+  color: #d38fff;
+  margin-bottom: 15px;
+  text-align: center;
+  text-shadow: 0 0 10px #a000ff;
+}
+
+#description p {
+  margin-bottom: 10px;
+}
+
+/* ----------------- LINK DIVS ----------------- */
+#link-div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#link-div p {
+  background: rgba(40, 0, 60, 0.3);
+  padding: 10px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  color: #d38fff;
+  cursor: pointer;
+  box-shadow:
+    0 0 5px #a000ff,
+    0 0 15px #d38fff;
+}
+
+#link-div p:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 15px #a000ff,
+    0 0 30px #d38fff;
+  animation: neonPulse 2s ease infinite;
+}
+
+#link-div a {
+  color: #d38fff;
+  text-decoration: none;
+}
+
+#link-div a:hover {
+  text-decoration: underline;
+}
+
+/* ---------label------------------------------*/
+
+#labl {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/* ----------------- FOOTER ----------------- */
+footer {
+  background: rgba(20, 0, 30, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow:
+    0 0 10px #a000ff,
+    0 0 25px #d38fff;
+  margin-top: 30px;
+}
+
+footer h2 {
+  color: #d38fff;
+  margin-bottom: 15px;
+}
+
+footer input,
+footer textarea {
+  width: 90%;
+  max-width: 500px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(40, 0, 60, 0.3);
+  color: #ccc;
+  box-shadow: 0 0 5px #a000ff;
+}
+
+footer input[type="submit"] {
+  cursor: pointer;
+  background: linear-gradient(to right, #a000ff, #d38fff);
+  color: white;
+  font-weight: bold;
+  border: none;
+  box-shadow:
+    0 0 10px #a000ff,
+    0 0 25px #d38fff;
+  transition: 0.3s;
+}
+
+footer input[type="submit"]:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 20px #a000ff,
+    0 0 40px #d38fff;
+}
+
+/* ----------------- NEON PULSE ----------------- */
+@keyframes neonPulse {
+  0% {
+    box-shadow:
+      0 0 5px #a000ff,
+      0 0 15px #d38fff;
+  }
+  50% {
+    box-shadow:
+      0 0 15px #a000ff,
+      0 0 30px #d38fff;
+  }
+  100% {
+    box-shadow:
+      0 0 5px #a000ff,
+      0 0 15px #d38fff;
+  }
+}
+
+.neon-animated {
+  animation: neonPulse 2s infinite;
+}
+
+/* ----------------- RESPONSIVE ----------------- */
+@media (max-width: 900px) {
+  #nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  #description {
+    font-size: 0.9rem;
+  }
+
+  #link-div p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  #description {
+    font-size: 0.8rem;
+  }
+
+  #link-div p {
+    font-size: 0.9rem;
+  }
+
+  footer input,
+  footer textarea {
+    width: 95%;
+  }
+}
